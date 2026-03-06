@@ -7,7 +7,42 @@
         <meta charset="utf-8">
         <style>
             p>span{color: #b43625;} 
-            #he-man{width: 500px; border: 3px solid yellow}
+            #he-man{width: 500px; border: 3px solid yellow; border-radius: 30%;}
+            /** RRGGBBAA **/
+            /** AA é alfa opcional **/
+            /** 00 -> FF **/
+            table,td,th, caption{
+                 border: 1px solid #000000;
+                 border-collapse: collapse;
+            }
+            #tabela-churrasco, #tabela-churrasco td, #tabela-churrasco th, caption{
+                border: 2px solid blueviolet;
+                border-collapse: collapse;
+            }
+            #tabela-churrasco tr:nth-child(2n){
+                background-color: lightblue;
+            }
+            #tabela-churrasco td:hover{
+                background-color: gold;
+            }
+            #tabela-churrasco tr:hover{
+                background-color: lightcoral;
+                font-size: 1.4em;
+                transition: ease 1s;
+            }
+            #tabela-churrasco caption{
+                border-radius: 10px 10px 0px 0px;
+            }
+            #card{
+                border:1px solid black;
+                box-shadow: 1px 2px gray;
+                display: inline-block;
+            }
+            #imagenzinha{
+                width: 200px;
+                 border:3px solid black;
+                 border-radius:30%;
+            }
         </style>
         <!--um span será pintado apenas se estiver dentro de um paragrafo -->
     </head>
@@ -72,5 +107,104 @@
     <h2>He-man</h2>
     <img id="he-man" src="./imgs/he-man.webp" alt="imagem do he-man">
     <a href="https://stories.cnnbrasil.com.br/wp-content/uploads/sites/9/2024/05/he-man.jpg">Foto do He-man</a>
+    <br>
+    <br>    
+    <hr>
+    <br>
+    <table id="tabela-churrasco">
+        <caption>Lista de Compra</caption>
+        <tr>
+            <th>Itens</th>
+            <th>Classificação</th>
+            <th>Descrição</th>
+            <th>Quantidade</th>
+            <th>Valor</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td rowspan="3">Comidas</td>
+            <td>Carne</td>
+            <td>6</td>
+            <td>40</td>
+            <td>240</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Franguinho</td>
+            <td>2</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Pão de Alho</td>
+            <td>2</td>
+            <td>15</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td rowspan="3">Bebidas</td>
+            <td>Cerveja</td>
+            <td>20</td>
+            <td>5</td>
+            <td>100</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Àgua c/ Gás</td>
+            <td>5</td>
+            <td>3</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Refri</td>
+            <td>5</td>
+            <td>8</td>
+            <td>40</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td rowspan="3">Outros</td>
+            <td>Copos</td>
+            <td>1</td>
+            <td>8</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Guardanapos</td>
+            <td>1</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Carvão</td>
+            <td>1</td>
+            <td>32</td>
+            <td>32</td>
+        </tr>
+        <tr>
+            <td colspan="5">Total</td>
+            <td>500</td>
+        </tr>
+    </table>
+
+    <h1>Container</h1>
+    <div id="card">
+            <img id="imagenzinha" src="./imgs/pessoa-feliz.webp" alt="">
+        <h2>Título</h2>
+            <img id="he-man" src="./imgs/he-man.webp" alt="Imagem He-man">
+    </div>
+
+
+    <p>table>(tr>(td{$}+td{a}*10))*10</p>
+    <p></p>
+    <p></p>
+
+
     </body>
 </html>
