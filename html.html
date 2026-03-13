@@ -113,14 +113,16 @@
     <br>
     <table id="tabela-churrasco">
         <caption>Lista de Compra</caption>
+        <thead>
         <tr>
             <th>Itens</th>
-            <th>Classificação</th>
-            <th>Descrição</th>
+            <th>Classificação</th>                <th>Descrição</th>
             <th>Quantidade</th>
             <th>Valor</th>
             <th>Subtotal</th>
         </tr>
+        </thead>
+        <Tbody>
         <tr>
             <td>1</td>
             <td rowspan="3">Comidas</td>
@@ -187,10 +189,13 @@
             <td>32</td>
             <td>32</td>
         </tr>
+        </Tbody>
+        <tfoot>
         <tr>
             <td colspan="5">Total</td>
             <td>500</td>
         </tr>
+        </tfoot>
     </table>
 
     <h1>Container</h1>
@@ -205,6 +210,34 @@
     <p></p>
     <p></p>
 
+    <h2>Formularios e Imputs</h2>
+    <a href="https://www.w3schools.com/hTml/html_forms.asp">Formularios</a>
+    <form action="">
+        <label for="nome">Informer seu nome</label>
+        <input id="nome" type="text">
+        <label for="cor">Cor</label>
+        <input type="color" id="cor">
+        <label for="dtnascimento">Data nascimento</label>
+        <input type="date"id="dtnascimento">
+        <input type="datetime" name="" id="">
+        <input type="file" name="" id="">
+        <input type="image" src="" alt="">
+        <input type="number" name="" id="">
+        <input type="checkbox" name="" id="">
+        <input type="radio" name="" id="">
+        <input type="range" name="" id="">
 
+        <input type="submit" value="submit">
+        
+    </form>
+
+    <form action="https://google.com/search" method=get>
+        <label for="chave">Informe a busca</label>
+        <input type="text" name="q" id="chave">
+        <input type="submit" value="Pesquisar">
+    </form>
+
+    <p></p>
+    <p></p>
     </body>
 </html>
