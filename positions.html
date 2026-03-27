@@ -5,30 +5,30 @@
     <style>
         *{border: 1px solid red; margin: 0px; padding: 0px;}
         .box{
+            line-height: 30pt;
             width: 100px;
             height: 100px;
             border-color: black;
             display: inline-block;
         }
-        #box1{background-color: hotpink;
-            position: relative;    
-            top: 100px;
-            left: 150px;
+        #box1{background-color: hotpink;    
+            position: relative;
+            top: 300px;
+            left: 50px;
         }
         #box2{background-color: yellow;
-            position: relative;
-            top: 200px;
+            position:absolute;
+            opacity: 0.5;
+            text-align: center;
+            top: 300px;
         }
         #box3{background-color: green;
-            position: absolute;
-            top: 5px;
-            left: 5px;
-        }
-        #box4{background-color: blue;
             position: fixed;
             top: 0px;
             right: 0px;
-            bottom: 0px;
+        }
+        #box4{background-color: blue;
+           
         }
         #box5{background-color: purple;}
         span:last-child{background-color: red;}
