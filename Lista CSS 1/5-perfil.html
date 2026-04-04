@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil — Joana Barbosa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e8e8e8;
+            min-height: 100vh;
+            padding: 24px;
+        }
+        .curriculo {
+            display: flex;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+            min-height: calc(100vh - 48px);
+        }
+        .sidebar {
+            flex: 0 0 30%;
+            max-width: 280px;
+            background: #3d4449;
+            color: #fff;
+            padding: 36px 28px;
+        }
+        .foto-wrap {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .foto {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.35);
+            display: block;
+            margin: 0 auto;
+        }
+        .secao-sidebar {
+            margin-bottom: 28px;
+        }
+        .secao-sidebar h2 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0 0 12px 0;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .secao-sidebar dl {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+        .secao-sidebar dt {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .secao-sidebar dt:first-child {
+            margin-top: 0;
+        }
+        .secao-sidebar dd {
+            margin: 4px 0 0 0;
+        }
+        .principal {
+            flex: 1;
+            padding: 40px 40px 48px;
+            color: #222;
+        }
+        .principal h1 {
+            font-size: 1.85rem;
+            margin: 0 0 16px 0;
+            font-weight: bold;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #ccc;
+        }
+        .resumo {
+            margin: 0 0 32px 0;
+            line-height: 1.6;
+            color: #333;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="curriculo">
+        <aside class="sidebar">
+            <div class="foto-wrap">
+                <img class="foto" src="../imgs/foto pro curriculo.jpeg" alt="Foto do mais lindo do Brasil">
+            </div>
+            <section class="secao-sidebar">
+                <h2>Pessoal</h2>
+                <dl>
+                    <dt>Nome</dt>
+                    <dd>Daniel Tiedt</dd>
+                    <dt>Endereço</dt>
+                    <dd>Rua Professor Simão Hess, 565, 89128-142 Luiz Alves/SC</dd>
+                    <dt>Número de telefone</dt>
+                    <dd>+55 (47) 9 97878799</dd>
+                    <dt>Email</dt>
+                    <dd>daniel.t2008@aluno.ifsc.edu.br</dd>
+                </dl>
+            </section>
+            <section class="secao-sidebar interesses">
+                <h2>Interesses</h2>
+                <ul>
+                    <li>Marketing digital</li>
+                    <li>Futsal e Futebol</li>
+                </ul>
+            </section>
+        </aside>
+        <main class="principal">
+            <h1>Daniel Tiedt</h1>
+            <p class="resumo">
+                Um cara calmo super gente boa, que curte surfar uma onda, jogar bola, curte tecnologias novas.
+                Fissurado em empreendedorismos e formas de driblar impostos.
+            </p>
+            <h2>Experiência profissional</h2>
+            <div>
+                <div>
+                    <strong>Jovem Aprendiz</strong>
+                    <span class="periodo">2023.1</span>
+                </div>
+                <p>Rovitex, Luiz Alves</p>
+                <ul>
+                    <li>Trabalho com ferramentas como: Excel, Word.</li>
+                </ul>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

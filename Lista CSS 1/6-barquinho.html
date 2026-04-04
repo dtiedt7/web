@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6 — Barquinho no mar (CSS)</title>
+    <style>
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .cenario {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#e3f2fd, #90caf9 70%);
+        }
+
+        .nuvem {
+            position: absolute;
+            top: 15%;
+            left: -120px;
+            width: 80px;
+            height: 35px;
+            background: white;
+            border-radius: 40px;
+            box-shadow:
+                35px 5px 0 white,
+                18px -8px 0 white,
+                55px 0 0 white;
+            z-index: 2;
+            animation: nuvem 40s linear infinite;
+        }
+        @keyframes nuvem {
+            from { transform: translateX(0); }
+            to { transform: translateX(calc(100vw + 200px)); }
+        }
+
+        .mar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: #3949ab;
+            z-index: 3;
+            overflow: hidden;
+        }
+        .mar::before,
+        .mar::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 200%;
+            height: 40px;
+            top: -18px;
+        }
+        /* ondas com radial-gradient só em tons de azul */
+        .mar::before {
+            background: radial-gradient(ellipse 50% 100% at 50% 100%, #5c6bc0 0%, transparent 70%);
+            background-size: 55px 22px;
+            background-repeat: repeat-x;
+            animation: onda1 4s linear infinite;
+        }
+        .mar::after {
+            top: -10px;
+            opacity: 0.7;
+            background: radial-gradient(ellipse 50% 100% at 50% 100%, #283593 0%, transparent 65%);
+            background-size: 45px 18px;
+            background-repeat: repeat-x;
+            animation: onda2 5s linear infinite reverse;
+        }
+        @keyframes onda1 {
+            from { transform: translateX(0); }
+            to { transform: translateX(-80px); }
+        }
+        @keyframes onda2 {
+            from { transform: translateX(0); }
+            to { transform: translateX(-70px); }
+        }
+
+        .barco-trilho {
+            position: absolute;
+            bottom: calc(30% - 5px);
+            left: 0;
+            z-index: 5;
+            width: 120px;
+            height: 85px;
+            animation: ir 18s linear infinite;
+        }
+        .barco {
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 95'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2.5' d='M8 58 Q58 78 112 58 L106 52 L14 52 Z'/%3E%3Cpath fill='%2300d4ff' stroke='%23000' stroke-width='2' d='M58 52 L58 12 L102 48 Z'/%3E%3Cline x1='58' y1='52' x2='58' y2='10' stroke='%23000' stroke-width='2'/%3E%3Cpath fill='%2300d4ff' stroke='%23000' stroke-width='1.5' d='M58 10 L72 10 L58 18 Z'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            animation: balanco 2s ease-in-out infinite alternate;
+        }
+        @keyframes ir {
+            from { transform: translateX(-130px); }
+            to { transform: translateX(calc(100vw + 30px)); }
+        }
+        @keyframes balanco {
+            from { transform: rotate(-5deg); }
+            to { transform: rotate(5deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cenario">
+        <!-- nuvem: border-radius + box-shadow; animação nuvem (ida esquerda → direita) -->
+        <div class="nuvem"></div>
+        <!-- barco: .barco tem background-image e balanço; .barco-trilho = movimento horizontal (loop) -->
+        <div class="barco-trilho">
+            <div class="barco"></div>
+        </div>
+        <!-- .mar + ::before e ::after com radial-gradient (ondas animadas) -->
+        <div class="mar"></div>
+    </div>
+</body>
+</html>
