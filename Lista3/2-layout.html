@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        h1{
+            color: lightgrey;
+            margin-bottom: 20px;
+            
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .container{
+            border: solid 1px;
+            border-color: blue;
+            height: 60vh;
+            display: flex;
+            flex-direction: column; 
+            
+            align-items: center; 
+            gap: 30px;
+            padding: 30px;
+        }
+        .box{
+            width: 500px;
+            height: 15px;
+            margin: 10px;
+            background-color: lightgrey;
+
+        }
+
+        #box1{
+            width: 50%;
+            height: 15px;
+            margin: 5px;
+            background-color: lightgrey;
+        }
+
+        .circulo{
+            width: 80px;
+            height: 80px;
+            background-color: lightgrey;
+            border-radius: 50%;
+            margin-top: auto;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Company Logo</h1>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="circulo"></div>
+        <div id="box1"></div>
+
+    </div>
+</body>
+</html>
