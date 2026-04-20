@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout Flex</title>
+<style>
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+#Tela {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    background-color: greenyellow;
+    padding: 20px;
+}
+
+#main {
+    display: flex;
+    height: 400px;
+}
+
+#article {
+    flex: 3;
+    background-color: #d9d9d9;
+    padding: 20px;
+}
+
+#aside {
+    flex: 1;
+    background-color: #e6e1c5;
+    padding: 20px;
+}
+
+#nav {
+    flex: 1;
+    background-color: #c7d8c4;
+    padding: 20px;
+}
+
+#footer {
+    background-color: greenyellow;
+    padding: 20px;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+    <div id="Tela">
+        <div id="header">Header</div>
+
+        <div id="main">
+            <div id="article">Article</div>
+            <div id="aside">Aside</div>
+            <div id="nav">Nav</div>
+        </div>
+
+        <div id="footer">Footer</div>
+    </div>
+</div>
+
+</body>
+</html>
