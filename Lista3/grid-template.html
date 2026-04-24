@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html{padding: 0px; margin: 0px;}
+        .container{
+            display: grid;
+            height: 100vh;
+            grid-template-areas: "header header header header"
+                                 "main main . sidebar"
+                                 "footer footer footer footer";
+            padding: 0px;
+        }
+        .box{border: 1px solid black;
+        display: flex;
+        border-radius: 7%;
+        justify-content: center;
+        align-items: center;
+        font-size: 14pt;
+        }
+        #box1{grid-area: header; background-color: orange;}
+        #box2{grid-area: main; background-color: rgb(68, 185, 224);}
+        #box3{grid-area: sidebar; background-color: red;}
+        #box4{grid-area: footer;background-color: yellowgreen;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box" id="box1">header</div>
+        <div class="box" id="box2">main</div>
+        <div class="box" id="box3">sidebar</div>
+        <div class="box" id="box4">footer</div>
+    </div>
+
+</body>
+</html>
