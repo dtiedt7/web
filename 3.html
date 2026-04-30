@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 3</title>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        .box{
+            display: flex;
+            width: 600px;
+            height: 400px;
+            flex-direction: column;
+            border: 1px solid black;
+        }
+        #box1{
+            flex-direction: row;
+        }
+
+        #box2{
+            flex-direction: column;
+        }
+
+        #box3{
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .listra{
+            flex: 1;
+        }
+        #listraAzul{
+            background-color: blue;
+        }
+        #listraBranca{
+            background-color: white;
+        }
+        #listraVermelha{
+            background-color: red;
+        }
+        #listraPreta{
+            background-color: black;
+        }
+        #listraAmarela{
+            background-color: gold;
+        }
+        #circulo{
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1" class="box">
+            <div id="listraAzul" class="listra"></div>
+            <div id="listraBranca" class="listra"></div>
+            <div id="listraVermelha" class="listra"></div>
+        </div>
+        <div id="box2" class="box">
+            <div id="listraPreta" class="listra"></div>
+            <div id="listraVermelha" class="listra"></div>
+            <div id="listraAmarela" class="listra"></div>
+        </div>
+        <div id="box3" class="box">
+            <div id="circulo"></div>
+        </div>
+    </div>
+</body>
+</html>
