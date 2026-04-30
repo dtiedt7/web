@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+    <style>
+        /*Uma regra css tem:
+          Seletor + {propriedade: valor;}
+          
+          Exemplo abaixo:*/
+        p{
+            color: blue;
+            font-size: 18pt;
+        }
+
+        /*animação*/
+
+        @keyframes mudaCor {
+            from{
+                background-color: blue;
+            }
+            to{
+                background-color: greenyellow;
+                font-size: 30pt;
+            }
+        }
+
+        /*pseudo-classe
+        hover muda o elemento quando passa o mouse encima
+        animação esta aqui para ser ativada quando passar o mouse encima*/
+
+        button:hover{
+            background-color: goldenrod;
+            font-size: 25pt;
+            animation: mudaCor 2s infinite alternate;
+        }
+
+        /*pseudo-elemento*/
+        
+        h1::before{
+            content: "*";
+            color: darkgoldenrod;
+        }
+
+        button{
+            border: 1px solid black;
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrutura e Sintaxe do css - questão 2</h1>
+    <p>css é usado para estilização do HTML, tem muitas funções, como animações, mudar cores, mudar posição, etc..</p>
+    <button>passe o mouse aqui</button>
+</body>
+</html>
