@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4 - grid</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-areas: 
+            "a b c"
+            "d meio e"
+            "f g h";
+            height: 100vh;
+            background-color: darkblue;
+        }
+        #box{
+            grid-area: meio;
+            justify-self: center;
+            align-self: center;
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">🚀</div>
+</body>
+</html>
