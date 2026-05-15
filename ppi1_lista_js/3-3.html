@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio</title>
+</head>
+<body>
+    
+    <h1>Sorteio</h1>
+    <h2>Numeros devem ser maiores ou igual a 1 e menores ou igual a 100</h2>
+
+    <label for="n1">vmin</label>
+    <input type="number" id="n1">
+
+    <label for="n2">vmax</label>
+    <input type="number" id="n2">
+    <br>
+    <button id="botao">Sortear</button>
+
+
+    <div id="sorteio"></div>
+
+<script>
+
+    let button = document.querySelector("#botao");
+    let divRes = document.querySelector("#sorteio")
+    let n=0;
+
+    button.addEventListener("click", ()=>{
+
+        let vmin = Number(document.querySelector("#n1").value);
+        let vmax = Number(document.querySelector("#n2").value);
+        let r = Math.floor(Math.random()*(vmax-vmin)+vmin);
+        
+        n++;
+
+        p = document.createElement("p");
+        p.style.display= "inline-block";
+        p.style.border= "1px solid black";
+        p.style.borderRadius= "50%";
+        p.style.padding= "10px";
+        p.style.gap= "20px";
+        p.innerHTML = `Sorteio ${n} = ${r}`;
+        
+        divRes.appendChild(p);
+        
+    })
+
+    function teste(){
+        for(let i = 0; i < 5; i++){
+            let vmin = Number(document.querySelector("#n1").value);  
+            let vmax = Number(document.querySelector("#n2").value);  
+            let r = Math.floor(Math.random() * (vmax - vmin + 1) + vmin);
+
+            n++;
+
+            let p = document.createElement("p");
+            p.style.display = "inline-block";
+            p.style.border = "1px solid black";
+            p.style.borderRadius = "50%";
+            p.style.padding = "10px";
+            p.style.gap = "20px";
+            p.style.height = "2rem";
+            p.innerHTML = `Sorteio ${n} = ${r}`;
+
+            console.log(`Sorteio ${n} = ${r}`);
+        } 
+}
+    console.clear();
+    console.log(teste());
+
+</script>
+</body>
+</html>
